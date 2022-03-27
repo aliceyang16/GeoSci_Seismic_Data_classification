@@ -1,0 +1,10 @@
+# Ingore all the following files
+*.log
+*.txt
+*.png
+
+# Ignore all files in the following folders
+paper/
+128_training/
+env/
+model/
