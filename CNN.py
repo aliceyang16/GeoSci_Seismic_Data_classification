@@ -12,7 +12,7 @@ directory = os.getcwd()
 image_size = 128
 kernal_size = 102
 
-class_names = ['45', '225', 'x']
+class_names = ['x', 'none_x']
 
 # read in images from files
 def readImage(folderName, action, imageArraySize):
@@ -79,7 +79,7 @@ def createCNNModel(train_images, train_labels, test_images, test_labels):
 	model.add(layers.Conv2D(64, (2, 2), activation='relu'))
 	model.add(layers.Flatten())
 	model.add(layers.Dense(64, activation='relu'))
-	model.add(layers.Dense(3))
+	model.add(layers.Dense(2))
 
 	model.summary()
 
@@ -206,7 +206,7 @@ def createCNNModelOnly():
 	model.add(layers.Conv2D(64, (16, 16), activation='relu'))
 	model.add(layers.Flatten())
 	model.add(layers.Dense(64, activation='relu'))
-	model.add(layers.Dense(3))
+	model.add(layers.Dense(2))
 
 	model.summary()
 
